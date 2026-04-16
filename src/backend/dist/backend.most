@@ -1,0 +1,31 @@
+// Version: 1.0.0
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type Prompt__449451233 =
+  {
+    complexity : Int;
+    content : Text;
+    created_at : Timestamp__424650949;
+    id : Nat;
+    title : Text
+  };
+type Prompt__632853933 = Prompt__449451233;
+type Timestamp__301639476 = Int;
+type Timestamp__424650949 = Timestamp__301639476;
+actor {
+  stable prompts :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Prompt__632853933]];
+      var elementIndex : Nat__490723111
+    };
+  stable viewCounts :
+    {var root : Node__46230540<Nat, Nat>; var size : Nat__490723111}
+};

@@ -1,0 +1,19 @@
+{
+  "overview": "A full-stack AI prompt library where users can browse, view, and create AI image generation prompts. Each prompt has a title, content, and complexity rating. View counts are tracked live every time a prompt is opened.",
+  "features": [
+    "Browse all saved prompts with color-coded complexity badges",
+    "Prompt detail view with live view counter that increments on each visit",
+    "Create new prompts with a validated form (title, content, complexity)",
+    "Real-time form validation with inline error messages",
+    "Navigate between list, detail, and create pages"
+  ],
+  "category": "productivity",
+  "tags": [
+    "prompts",
+    "ai",
+    "library",
+    "crud",
+    "productivity"
+  ],
+  "last_updated": "2026-04-16T15:35:17.702Z"
+}

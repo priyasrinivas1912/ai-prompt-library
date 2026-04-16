@@ -1,0 +1,27 @@
+type Timestamp = int;
+type Result = 
+ variant {
+   err: PromptError;
+   ok: PromptWithViews;
+ };
+type PromptWithViews = 
+ record {
+   complexity: int;
+   content: text;
+   created_at: Timestamp;
+   id: nat;
+   title: text;
+   view_count: nat;
+ };
+type PromptError = 
+ variant {
+   InvalidComplexity: text;
+   InvalidContent: text;
+   InvalidTitle: text;
+   NotFound;
+ };
+service : {
+  createPrompt: (title: text, content: text, complexity: int) -> (Result);
+  getPrompt: (id: nat) -> (Result);
+  getPrompts: () -> (vec PromptWithViews) query;
+}
